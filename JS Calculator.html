@@ -4,83 +4,35 @@
 	<title>JavaScript Calculator</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-
-	<!-- <style>
-		button{
-			width: 8%;
-			background-color: #FFE9EC;
-			line-height: 200%;
-		}
-		
-		textarea{
-			width: 32.5%;
-			line-height: 100%;
-			text-align: right;
-			font-size: 150%
-		}	
-
-		div{
-			margin: auto;
-		}
-	</style> -->
-
-	<script>
-		var number1, number2, sign;
-		function callNum(num)
-		{
-			document.getElementById("dis").innerHTML= num;
-			switch(num)
-			{
-				case "+": sign=1; break;
-				case "-": sign=2; break;
-				case "*": sign=3; break;
-				case "/": sign=4;
-			}
-			if(number1==undefined)
-				number1=num;
-			else
-				number2=num;
-		}
-		function calculate()
-		{
-			if(sign==1)
-				document.getElementById("dis").innerHTML = Number(number1)+Number(number2);
-			else if(sign==2)
-				document.getElementById("dis").innerHTML = Number(number1)-Number(number2);
-			else if(sign==3)
-				document.getElementById("dis").innerHTML = Number(number1)*Number(number2);
-			else
-				document.getElementById("dis").innerHTML = Number(number1)/Number(number2);
-			number1= undefined;
-			number2= undefined;
-		}
-
-	</script>
-
-
+	<script src="scriptfile.js"></script>
 </head>
 <body>
-
-	<div>
-		<textarea Id="dis"></textarea><br>
-		<button onclick="callNum(9)">9</button>
-		<button onclick="callNum(8)">8</button>
-		<button onclick="callNum(7)">7</button>
-		<button onclick="callNum('+')">+</button><br>
-		<button onclick="callNum(6)">6</button>
-		<button onclick="callNum(5)">5</button>
-		<button onclick="callNum(4)">4</button>
-		<button onclick="callNum('-')">-</button><br>
-		<button onclick="callNum(3)">3</button>
-		<button onclick="callNum(2)">2</button>
-		<button onclick="callNum(1)">1</button>
-		<button onclick="callNum('*')">*</button><br>
-		<button onclick="callNum(0)">0</button>
-		<button onclick="callNum(' ')">C</button>
-		<button onclick="calculate()">=</button>
-		<button onclick="callNum('/')">/</button>
-		    
-	</div>
-
+	<center>
+		<br><br><br><br><br><br>
+		<h2>Simple Calculator!</h2>
+		<br>
+		<div>
+			<textarea Id="dis"></textarea><br>
+			<button onclick="callNum(9)">9</button>
+			<button onclick="callNum(8)">8</button>
+			<button onclick="callNum(7)">7</button>
+			<button onclick="callNum('+')">+</button><br>
+			<button onclick="callNum(6)">6</button>
+			<button onclick="callNum(5)">5</button>
+			<button onclick="callNum(4)">4</button>
+			<button onclick="callNum('-')">-</button><br>
+			<button onclick="callNum(3)">3</button>
+			<button onclick="callNum(2)">2</button>
+			<button onclick="callNum(1)">1</button>
+			<button onclick="callNum('*')">x</button><br>
+			<button onclick="callNum(0)">0</button>
+			<button onclick="clrscr()">C</button>
+			<button onclick="calculate()">=</button>
+			<button onclick="callNum('/')">/</button>
+				
+		</div>
+	
+	</center>
+	
 </body>
 </html>
